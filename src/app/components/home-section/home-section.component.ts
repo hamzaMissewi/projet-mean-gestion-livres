@@ -13,6 +13,9 @@ export class HomeSectionComponent {
       book1: {
         id: 1,
         title: 'math',
+        prix: 500,
+        reviews: 1997,
+        imageUrl: '../../assets/',
       },
       book2: {
         id: 2,

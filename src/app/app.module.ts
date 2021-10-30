@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
+    // enregistrement de component (CLI)
     AppComponent,
     AdminSectionComponent,
     HomeSectionComponent,
