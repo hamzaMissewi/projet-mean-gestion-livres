@@ -1,0 +1,2 @@
+installer bootrap 5 + popperjs/core
++ jquery
