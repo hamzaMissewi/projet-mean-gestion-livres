@@ -13,3 +13,12 @@
     height: 100%;
   }
 }
+
+.link-css {
+  text-decoration: none;
+}
+
+.link-css :hover {
+ color: red;
+ /* text-color: red; */
+}
