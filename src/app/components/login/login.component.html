@@ -10,15 +10,26 @@
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
             <p class="lead fw-normal mb-0 me-3">Sign in with</p>
             <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
+              <fa-icon [icon]="facebookIcon"></fa-icon>
+              <!-- <i class="fab fa-facebook-f"></i> -->
             </button>
 
             <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
+              <a href="https://www.twitter.com/login/" target="_blank" class="text-decoration-underline">
+                <fa-icon [icon]="twitter"></fa-icon>
+              </a>
+              <!-- <i class="fab fa-twitter"></i> -->
             </button>
 
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-linkedin-in"></i>
+            <button type="button" class="btn btn-info btn-floating mx-1">
+              <fa-icon class="text-white" [icon]="linkedin"></fa-icon>
+              <!-- <i class="fab fa-linkedin-in"></i> -->
+            </button>
+
+            <button type="button" class="btn btn-danger btn-floating mx-1">
+              
+              <fa-icon [icon]="google"></fa-icon>
+              <!-- <i class="fab fa-linkedin-in"></i> -->
             </button>
           </div>
 
@@ -48,14 +59,17 @@
                 Remember me
               </label>
             </div>
-            <a href="#!" class="text-body">Forgot password?</a>
+            <a routerLink="#!" class="text-body">Forgot password?</a>
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="button" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register"
-                class="link-danger">Register</a></p>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
+              <a routerLink="/register" class="link-danger">
+                Register
+              </a>
+            </p>
           </div>
 
         </form>
@@ -71,17 +85,19 @@
 
     <!-- Right -->
     <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
+      <a routerLink="#!" class="text-white me-4">
+        <!-- <i class="fab fa-facebook-f"></i> -->
+        <fa-icon [icon]="facebookIcon"></fa-icon>
       </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
+      <a routerLink="#!" class="text-white me-4">
+        <fa-icon [icon]="twitter"></fa-icon>
+
       </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
+      <a routerLink="#!" class="text-white me-4">
+        <fa-icon [icon]="google"></fa-icon>
       </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
+      <a routerLink="#!" class="text-white">
+        <fa-icon [icon]="linkedin"></fa-icon>
       </a>
     </div>
     <!-- Right -->

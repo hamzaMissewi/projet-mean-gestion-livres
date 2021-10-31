@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// si on veut integrer routing module f west el app module
+// import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeSectionComponent } from './components/home-section/home-section.component';
@@ -12,8 +14,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { AboutRoutingModule } from './about-routing.module';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+// const routes: Routes = [];
 @NgModule({
   declarations: [
+    // enregistrement de component (CLI)
     AppComponent,
     AdminSectionComponent,
     HomeSectionComponent,
@@ -23,6 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     RegisterComponent,
     ListBooksComponent,
+    FontAwesomeModule,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +37,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutRoutingModule,
     FontAwesomeModule,
   ],
+  // imports: [
+  //   BrowserModule,
+  //   //  AppRoutingModule,
+  //     RouterModule.forRoot(routes),
+  //   ],
   providers: [],
   bootstrap: [AppComponent],
 })

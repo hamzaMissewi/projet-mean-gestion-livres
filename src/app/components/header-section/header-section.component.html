@@ -1,14 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <img  src="../../../assets/images/logo-biblio.jpg" alt="" width="120" height="80" class="d-inline-block align-text-top mr-10">
-    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="#">Accueil</a>
+    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="/home">Accueil</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="d-flex w-100">
+      <form class="input-group bg-warning d-flex w-100">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success h-15 w-5" type="submit">Chercher</button>
+        <!-- <button class="btn btn-outline-success h-15 w-5" type="submit">Chercher</button> -->
+        <fa-icon class="form-controle me-2 mt-2" id="search" [icon]="searchIcon"></fa-icon>
       </form>
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- <li class="nav-item">
@@ -16,7 +17,7 @@
         </li> -->
         <li class="nav-item dropdown">
           <!-- <a class="nav-link dropdown-toggle disabled" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="false"> -->
-          <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Espace Admin
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,12 +41,22 @@
             <rect width="400" height="400" fill="none"/>
             <path d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" fill="#696969"/>
         </svg>
+        <!-- <i class="fa fa-twitter" aria-hidden="true"></i> -->
     </a>
     <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
-        <svg id="youtube-logo" height="40" width="30" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#696969">
+        <!-- <svg id="youtube-logo" height="40" width="30" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#696969">
             <path d="M0 0h24v24H0V0z" fill="none"/>
             <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
-        </svg>
+        </svg> -->
+        <fa-icon [icon]="youtube"></fa-icon>
+    </a> 
+    <a aria-label="Facebook hamza" target="_blank" rel="noopener" href="https://facebook.com/angular" title="Facebook">
+       <svg id="facebook-logo" height="25" width="30" data-name="Logo" xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 50 50" >    
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+        <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z" />
+      </svg>
+
+        <!-- <i class="fa fa-facebook" aria-hidden="true"></i> -->
     </a>
   </div>
 </nav>
