@@ -3,6 +3,8 @@ créer l'app avec routing
 ng new app-name --routing
 
 ng generate module app-routing --flat --module=app
+
+
 --flat : empecher de créer le répertoire séparé de module routing
 --module=app : fel module app tsir link
 

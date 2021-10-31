@@ -1,15 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <img  src="../../../assets/images/logo-biblio.jpg" alt="" width="120" height="80" class="d-inline-block align-text-top mr-10">
-    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="#">Header</a>
+    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="#">Accueil</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <form class="d-flex w-100">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success h-15 w-5" type="submit">Chercher</button>
+      </form>
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/home">Accueil</a>
-        </li>
+        </li> -->
         <li class="nav-item dropdown">
           <!-- <a class="nav-link dropdown-toggle disabled" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="false"> -->
           <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,18 +26,7 @@
             <li><a class="dropdown-item disabled" routerLink="/modifier" tabindex="-1" aria-disabled="true">Modifier Livre</a></li>
           </ul>
         </li>
-          
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" routerLink="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li> -->
-      </ul>
-      <br />
-      <form class="d-flex w-100">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success h-15 w-5" type="submit">Chercher</button>
-      </form>
-   
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <br /> -->
         <!-- <li><a routerLink="/admin-section">Nouveau Livre</a></li> -->
         <li class="nav-item"><a class="nav-link active" routerLink="/login">Login</a></li>
         <li class="nav-item"><a class="nav-link active" routerLink="/register">Register</a></li>

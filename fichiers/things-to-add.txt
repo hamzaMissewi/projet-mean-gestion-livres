@@ -1,2 +1,17 @@
 installer bootrap 5 + popperjs/core
 + jquery
+
+<!-- *nfFor, *ngIf, data binding : entre state et template : affiche les string par interpolation
+    data binding types: des properties se trouve dans la classe on va afficher en html
+    Inner Html : interpolation
+    properties binding
+    event binding
+    model 
+-->
+<!-- server side routing -->
+<!-- client side routing dans les applications single page -->
+
+<!-- 
+    meta data dans component : @Component
+    classe ts : contient states et methods , proprieté/ états et comporetement
+ -->

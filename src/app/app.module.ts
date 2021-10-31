@@ -12,7 +12,9 @@ import { AdminSectionComponent } from './components/admin-section/admin-section.
 import { BooksComponent } from './components/books/books.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-// import { AppRouting2Module } from './app-routing-2.module';
+import { AboutRoutingModule } from './about-routing.module';
+import { AboutComponent } from './components/about/about.component';
+import { ListBooksComponent } from './components/list-books/list-books.component';
 
 // const routes: Routes = [];
 @NgModule({
@@ -26,8 +28,10 @@ import { RegisterComponent } from './components/register/register.component';
     BooksComponent,
     LoginComponent,
     RegisterComponent,
+    AboutComponent,
+    ListBooksComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, AboutRoutingModule],
   // imports: [
   //   BrowserModule,
   //   //  AppRoutingModule,
