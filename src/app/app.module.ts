@@ -6,12 +6,13 @@ import { HomeSectionComponent } from './components/home-section/home-section.com
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { ErrorComponent } from './components/error/error.component';
 import { AdminSectionComponent } from './components/admin-section/admin-section.component';
-import { BooksComponent } from './components/books/books.component';
+// import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { AboutRoutingModule } from './about-routing.module';
+// import { AboutRoutingModule } from './about-routing.module';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeSectionComponent,
     HeaderSectionComponent,
     ErrorComponent,
-    BooksComponent,
+    // BooksComponent,
     LoginComponent,
     RegisterComponent,
     ListBooksComponent,
@@ -27,8 +28,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AboutRoutingModule,
+    // AboutRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

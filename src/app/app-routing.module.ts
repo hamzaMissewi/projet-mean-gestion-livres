@@ -6,15 +6,17 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
 import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { BooksComponent } from './components/books/books.component';
+// import { BooksComponent } from '../../fichiers-extra/books/books.component';
+import { ListBooksComponent } from './components/list-books/list-books.component';
 
 const routes: Routes = [
-  { path: 'admin', component: AdminSectionComponent },
+  { path: 'admin/add-book', component: AdminSectionComponent },
   { path: 'header', component: HeaderSectionComponent },
   { path: 'home', component: HomeSectionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'books', component: BooksComponent },
+  // { path: 'books', component: BooksComponent },
+  { path: 'admin/list-books', component: ListBooksComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent },
 ];

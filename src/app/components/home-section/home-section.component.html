@@ -29,34 +29,30 @@
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
     </a>
 
-  </div>
+</div>
 </nav> -->
-<br /> <hr />
 <!-- ******************* -->
+  <!-- 
 <ol class="list-group list-group-numbered">
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
-              <h3>Livre 1</h3>
+      <h3>Livre 1</h3>
       <div class="fw-bold d-flex">
         <img src="../../../assets/images/livre-math.jpeg"  width="250" height="300" alt=""/>
         <p>hedha kteb mtaa math prépa math physique</p>
       </div>
     </div>
-
     <span class="badge bg-primary rounded-pill">reviews : 69</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
      <div class="ms-2 me-auto">
-        <!-- <div class="fw-bold">Livre 2</div> -->
         <h3>Livre 2</h3>
         <div class="fw-bold d-flex">
           <img src="../../../assets/images/phy-chimie-prepa.png"  width="250" height="300" alt=""/>
-          <p>hedha kteb mtaa physique chimie prépa math physique</p>
+          <p>hedha kteb mtaa chimie prépa math physique</p>
         </div>
       </div>
   </li>
-
-
 
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
@@ -64,5 +60,21 @@
       <img src="../../../assets/images/" alt="" class="" />
     </div>
     <span class="badge bg-primary rounded-pill">reviews : 1997</span>
+  </li>
+</ol> -->
+<br /> <hr />
+
+<ol class="list-group-item" *ngFor="let item of BooksArray">
+  <li class="d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <h2 class="fw-bold">{{item.titre}}</h2>
+        <h6>{{item.nbre_page}}</h6>
+        <h4>{{item.published_date}}</h4>
+        <img src="{{item.imageUrl}}" alt="book_iamge" width="250px" height="350px"/>
+        <h3>{{item.category}}</h3>
+        <h4>{{item.prix}}</h4>
+        <h6>{{item.reviews}}</h6>
+      <span class="badge bg-primary rounded-pill">{{item.reviews}}</span>
+      </div>
   </li>
 </ol>

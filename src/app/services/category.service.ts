@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
   public host: string = 'http://localhost:5000'; // backend express
-  // constructor() {}
   constructor(private httpClient: HttpClient) {}
 
-  public getCategory(page: number, size: number) {
-    return this.httpClient.get(
-      this.host + '/categories?page=' + page + '&size=' + size
-    );
-  }
+  // public getCategory(page: number, size: number) {
+  //   return this.httpClient.get(
+  //     this.host + '/categories?page=' + page + '&size=' + size
+  //   );
+  // }
 }
