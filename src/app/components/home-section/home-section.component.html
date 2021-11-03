@@ -1,6 +1,6 @@
 <div class="container">
 <br /> <hr />
-<ol class="row list-group-item" *ngFor="let item of BooksArray">
+<ol class="row list-group-item" *ngFor="let item of books">
   <li class="col card-container d-flex justify-content-between align-items-start col-lg-4">
       <div class="ms-2 me-auto" *ngIf="item">
         <h3 class="fw-bold">titre:  {{item.titre}}</h3>
@@ -8,9 +8,11 @@
         <h5>Date de publication:  <span class="bg-light border-1 pl-2 alert-danger">{{item.published_date}}</span></h5>
         <img src="{{item.imageUrl}}" alt="book_image" width="230px" height="270px"/>
         <h5>catégorie: {{item.category}}</h5>
+        <h4>rating: {{item.stars}}</h4>
         <h5>prix: {{item.prix}}</h5>
       <h5>nombre de reviews: <span class="badge bg-primary rounded-pill">{{item.reviews}}</span> </h5>
-      <button class="disabled" routerLink="/admin/list-books"  (click)="addToCart()">Espace Admin</button>
+      <button routerLink="/admin/list-books">Espace Admin</button>
+      <!-- <button routerLink="/admin/list-books" (click)="addToCart()">Espace Admin</button> -->
       </div>
   </li>
   <hr class="h-25"/>

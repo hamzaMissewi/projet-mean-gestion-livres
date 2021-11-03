@@ -11,11 +11,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent implements OnInit {
-  background_image: string;
+  backgroundImage: string;
   libelle: string;
   reviews: number;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.http
+    //   .get('http://localhost:5000/books')
+    //   .subscribe((books: [any]) => (this.books = books));
+    // this.crudService.getData().subscribe((res: any[]) => {
+    //   this.ItemsArray = res;
+    // });
+  }
 }

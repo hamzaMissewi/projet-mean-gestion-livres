@@ -1,12 +1,10 @@
 <div>
     <h2>Espace Admin / Gestion livres</h2>
-   <!-- <h4>Angular HTML Table Example</h4> -->
    <table class="table table-dark">
       <thead>
          <tr>
             <th scope="col">#ID</th> 
             <th scope="col">titre livre</th>
-            <!-- <th scope="col">auteur</th> -->
             <th scope="col">Réalisé par</th>
             <th scope="col">Catégorie</th>
             <th scope="col">Date publication</th>
@@ -19,7 +17,7 @@
          </tr>
       </thead>
       <tbody>
-         <tr *ngFor="let item of BooksArray">
+         <tr *ngFor="let item of books">
             <th scope="row">{{ item.id }}</th>
             <td>{{ item.titre }}</td>
             <td>{{ item.auteur }}</td>
