@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Url } from 'url';
-import { CrudService } from '../../services/crudBooks.service';
+import { BooksService } from 'src/app/services/books.service';
 @Component({
   selector: 'app-list-books',
   templateUrl: './list-books.component.html',
@@ -66,8 +65,57 @@ export class ListBooksComponent implements OnInit {
       published_date: '10/11/2020',
       nbre_page: 50,
     },
+    {
+      id: 6,
+      titre: 'The Storyteller: Tales of Life and Music',
+      auteur: 'Drave Grohl',
+      prix: '30.94 $',
+      reviews: 8228,
+      category: 'Audio Book',
+      imageUrl: 'https://m.media-amazon.com/images/I/51PsdEs6H9S.jpg',
+      published_date: '10/11/2020',
+      nbre_page: 50,
+    },
+    {
+      id: 7,
+      titre: "The judge's List: A Novel",
+      auteur: 'elon musk',
+      prix: '30.94 $',
+      reviews: '4,392 🌟',
+      category: 'Biography',
+      imageUrl:
+        'https://images-na.ssl-images-amazon.com/images/I/71N7vj5cSkL._AC_UL210_SR195,210_.jpg',
+      published_date: '10/9/2021',
+      nbre_page: 50,
+    },
+    {
+      id: 8,
+      titre: "The judge's List: A Novel",
+      auteur: 'Drave Grohl',
+      prix: '30.94 $',
+      reviews: '4,392 🌟',
+      category: 'Biography',
+      imageUrl:
+        'https://images-na.ssl-images-amazon.com/images/I/81PNeyIYVfL._AC_UL210_SR195,210_.jpg',
+      published_date: '10/12/2019',
+      nbre_page: 50,
+    },
+    {
+      id: 9,
+      titre: "The judge's List: A Novel",
+      auteur: 'Drave Grohl',
+      prix: '30.94 $',
+      reviews: '4,392 🌟',
+      category: 'Biography',
+      imageUrl:
+        'https://images-na.ssl-images-amazon.com/images/I/81PNeyIYVfL._AC_UL210_SR195,210_.jpg',
+      published_date: '10/12/2019',
+      nbre_page: 50,
+    },
   ];
-  constructor(private http: HttpClient) {}
+
+  constructor() {}
+  // constructor(private bookService: BooksService) {}
 
   ngOnInit() {
     // this.http

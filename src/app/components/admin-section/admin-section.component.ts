@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
@@ -14,14 +15,20 @@ export class AdminSectionComponent {
   releaseDate: Date = new Date();
 
   clicked = false;
-  title = `Angular ${VERSION.full} is rad!`;
+  // title = `Angular ${VERSION.full} is rad!`;
 
   handleClick() {
     this.clicked = true;
     window.location.href = 'http://www.w3schools.com';
     // window.location.replace('http://www.w3schools.com');
   }
-  // constructor() {}
+  // BooksArray: any[] = [
+  //   {
+  //     title: 'book',
+  //     author: 'victor',
+  //   },
+  // ];
+  constructor(private http: HttpClient) {}
 
   // ngOnInit(): void {}
 }
