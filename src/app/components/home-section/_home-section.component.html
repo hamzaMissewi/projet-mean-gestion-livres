@@ -1,0 +1,46 @@
+<div class="container bg-light">
+  <div *ngIf="book"></div>
+  <!-- <ol class="list-group-item row" *ngFor="let item of booksService.selectedBook"> -->
+  <ol class="list-group-item row" *ngFor="let item of booksDummyData">
+     <!-- <div *ngFor="let p of products._embedded.products">
+       <div class="col md-6">
+     </div> -->
+    <li class="card-container d-flex justify-content-between align-items-start" #_id="booksService.books.book_id">
+        <div class="ms-2 me-auto flex-xl-wrap" *ngIf="item"> 
+          <h4 class="fw-bold text-red"><span>Titre: </span>{{item.title}}</h4>
+          <h5>Date de publication:  <span class="badge bg-grey alert-dark">{{item.dateCreated}}</span></h5>
+          <img src="{{item.profilePic}}" alt="book_image" width="230px" height="270px"/>
+          <!-- <img src="{{item.imageUrl}}" alt="book_image" width="230px" height="270px"/> -->
+          <!-- <h5>Catégorie: {{item.category}}</h5> -->
+          <h5>publié par : <span>{{item.postedBy}}</span></h5>
+          <!-- <h5>Rating: <span>{{item.stars}}</span></h5> -->
+          <!-- <h5 class="position-relative right-15">nombre de pages: <span class="badge bg-danger rounded-2">{{item.nbrePages}}</span></h5> -->
+          <h4>Prix: {{item.price}}</h4>
+          <h5>Nombre< de page: <span class="badge bg-primary rounded-pill">{{item.nbrePages}}</span></h5>
+          <h5>quantite: <span class="badge bg-primary rounded-pill">{{item.quantite}}</span></h5>
+          <button routerLink="/admin/list-books">Espace Admin</button>   
+        </div>
+    </li>
+  </ol>
+
+  <!-- <div class="col s7">
+          <table class="responsive-table highlight">
+              <thead>
+                <tr>
+                  <th>title</th>
+                  <th>prix</th>
+                  <th>crée par</th>
+                  <th>date de publication</th>
+                </tr>
+              </thead>
+              <tr *ngFor="let book of booksService.selectedBooks">
+                <td>{{book.title}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.postedBy}}</td>
+                <td>{{book.dateCreated}}</td>
+              </tr>
+            </table>
+      </div> -->
+</div>
+
+

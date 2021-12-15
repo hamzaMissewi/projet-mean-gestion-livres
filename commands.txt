@@ -1,0 +1,76 @@
+créer l'app avec routing
+
+ng new app-name --routing
+
+ng generate module app-routing --flat --module=app
+
+
+--flat : empecher de créer le répertoire séparé de module routing
+--module=app : fel module app tsir link
+
+git --version
+git config --global user.name "esm"
+git config --global --replace-all user.name "esm"
+git config --global user.email "email@gmail.com"
+
+git branch "esm" : tasna3
+
+git checkout my_branch
+
+supprimer
+git branch -d my_branch
+
+or switch
+etre dans branch_b
+merger la branche nommée branch_a dans la branche nommée branch_b
+git merge branch_a
+
+git remote add origin url_repository
+pour supprimer : 
+git remote remove origin
+
+
+***************************
+echo "# git-cours-example" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hamzaMissewi/5-me-MEAN-octobre-2021.git
+git push -u origin main
+
+**************************** me site **************
+
+Nommer une série de commits et combiner les résultats de travaux terminés
+
+$ git branch
+
+git remote set-url origin https://github.com/your-other/repository
+
+Liste toutes les branches locales dans le dépôt courant
+
+$ git branch [nom-de-branche]
+
+Crée une nouvelle branche
+
+$ git switch -c [nom-de-branche]
+
+Bascule sur la branche spécifiée et met à jour le répertoire de travail
+
+$ git merge [nom-de-branche]
+
+Combine dans la branche courante l’historique de la branche spécifiée
+
+
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+clone
+push
+pull
+pull request : tell other about your changes to pull it from local to remote
+
+

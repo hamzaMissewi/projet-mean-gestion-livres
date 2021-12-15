@@ -1,0 +1,107 @@
+<!-- <p>accueil-biblio works!</p> -->
+<div class="container">
+  <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <!-- <h1>{{ title }}</h1> -->
+        <!-- <button [disabled] = "clicked" (click) = "handleClick()">Click Me</button> -->
+        <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+          <fieldset>
+
+            <!-- Form Name -->
+            <legend>Add New Book</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Book Title</label>
+              <div class="col-md-4">
+              <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Author</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Release Date</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Book Cover Image</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+              </div>
+            </div>
+
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Save Book</label>
+              <div class="col-md-4">
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+
+          
+              <button class="btn btn-danger">Delete Book</button>
+              <button class="btn btn-success">Update Book</button>
+        </form>
+      </div>
+  </div>
+
+
+  <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
+  <div ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText" class="row">
+      <br>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+          <div class="panel-body">
+
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12 thumbnail">
+                <img ng-src="../../assets/images/livre-math.jpeg" alt="book cover image" class="img-responsive"/>
+                <!-- <img ng-src="{{book.image}}" alt="book cover image" class="img-responsive"/> -->
+              </div>
+
+              <div class="col-md-9 col-sm-6 col-xs-12">
+                <ul class="list-group form-inline">
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Book Title:</h4>
+                    <!-- <p class="small"><a ng-href="https://en.wikipedia.org/wiki/Safi_Sa%C3%AFd"><button>{{title}}</button></a></p> -->
+                    <!-- <p class="small"><a ng-href="/books/{{book._id}}">{{book.title}}</a></p> -->
+                    <!-- <p class="small"><a ng-href="/books">book title</a></p> -->
+                  </li>
+
+                  <li class="list-group-item">
+                    <!-- <h4 class='inline-header'>Author Name:</h4> -->
+                    <p class="small">{{author}}</p>
+                    <!-- <p class="small">{{book.author}}</p> -->
+                    <!-- <p class="small">book author</p> -->
+
+                  </li>
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Released date:</h4>
+                    <p class="small">{{releaseDate}}</p>
+                    <!-- <p class="small">{{book.releaseDate}}</p> -->
+                    <!-- <p class="small"> book release date </p> -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

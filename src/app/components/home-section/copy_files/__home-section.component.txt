@@ -1,0 +1,60 @@
+import { Component, OnInit } from '@angular/core';
+import { booksData } from 'src/app/shared/dummy_data';
+// import { Router } from '@angular/router';
+import { CrudBooksService } from 'src/app/services/book.service';
+@Component({
+  selector: 'app-home-section',
+  templateUrl: './home-section.component.html',
+  styleUrls: ['./home-section.component.css'],
+  providers: [booksData],
+})
+export class HomeSectionComponent implements OnInit {
+  // currentRate = 0;
+  public books: any;
+  // public book_id: string;
+  // public title: string = 'livre mathématiques';
+  // public postedBy: string = 'harry potter';
+  // public price: number = 20;
+  // public nbrePages: number;
+  // public dateCreated: string = 'dd/mm/yyyy';
+  // public profilePic: string = 'http://...';
+  // public quantite: number;
+  // books: {
+  //   id: number;
+  //   titre: string;
+  //   auteur: string;
+  //   prix: number;
+  //   reviews: number;
+  //   category: string;
+  //   imageUrl: string;
+  //   published_date: Date;
+  //   nbre_page: number;
+  // }[] = [];
+
+  // @Input() book: { id; number;}
+  // books = [];
+  constructor(
+    // private router: Router,
+    private booksDummyData: booksData,
+    private booksData: CrudBooksService
+  ) {}
+  // addToCart = () => {
+  //   this.router.navigate(['/admin/list-books']);
+  // };
+  ngOnInit() {
+    this.books = this.booksDummyData.BooksArray;
+    this.getLivresFromApi();
+  }
+
+  getLivresFromApi(): void {
+    this.booksData.getAllBooks().subscribe(
+      (data: any) => {
+        this.books = data;
+        console.log('Resposne from Api is ', data);
+      },
+      (err) => {
+        console.log('error is ', err);
+      }
+    );
+  }
+}
