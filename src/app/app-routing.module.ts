@@ -8,12 +8,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 // import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
-// import { FormsModule } from '@angular/forms';
-// import { CommonModule } from '@angular/common';
-import { Seance27Component } from './components/seance27/seance27.component';
-
-// import { AddBook}
-// import { AdminComponent } from './modules/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -34,9 +28,7 @@ const routes: Routes = [
   { path: 'home', component: HomeSectionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  // { path: 'books', component: BooksComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'seance27', component: Seance27Component },
   {
     path: 'chariot',
     loadChildren: () =>

@@ -8,16 +8,11 @@ import { ErrorComponent } from './components/error/error.component';
 import { AdminSectionComponent } from './modules/admin/admin-section/admin-section.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-// import { AboutRoutingModule } from './about-routing.module';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { NavbarComponent } from './navbar/navbar.component';
-// import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 // import { CrudBooksService } from './services/crudBooks.service';
 import { FormsModule } from '@angular/forms';
-import { EditbookComponent } from './components/editbook/editbook.component';
-import { Seance27Component } from './components/seance27/seance27.component';
 import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
 @NgModule({
@@ -31,9 +26,6 @@ import { LocalStorageService } from './services/local-storage.service';
     RegisterComponent,
     ListBooksComponent,
     // NavbarComponent,
-    EditbookComponent,
-    Seance27Component,
-    // CoursesDetailsComponent,
   ],
   imports: [
     BrowserModule,

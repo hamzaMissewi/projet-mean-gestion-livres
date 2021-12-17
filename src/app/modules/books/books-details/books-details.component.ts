@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { bookService } from 'src/app/services/book.service';
+import { CartService } from 'src/app/services/cart.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { booksData } from 'src/app/shared/dummy_data';
 
@@ -10,22 +12,25 @@ import { booksData } from 'src/app/shared/dummy_data';
 })
 export class BooksDetailsComponent implements OnInit {
   public book?: any;
-  // public course?: object;
-  // public course: object = {};
+  // public book?: object;
+  // public book: object = {};
 
   constructor(
     private route: ActivatedRoute,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    // private cartService: CartService,
+    private bookService: bookService
   ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      // const courseId = params.get('id');
+      // const bookId = params.get('id');
       const bookId = params.get('id');
+      this.bookService.get(bookId!).subscribe((book) => (this.book = book));
       // this.book = booksData.filter((book) => book.id == bookId)[0];
       // LocalStorageService.getItem()
       // console.log(bookId)
-      // this.course = books.filter(course => course.id == courseId)[0];
+      // this.book = books.filter(book => book.id == bookId)[0];
       // this.book = booksData.filter(book => book.id == bookId)[0];
     });
   }

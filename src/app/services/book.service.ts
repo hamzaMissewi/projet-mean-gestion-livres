@@ -1,85 +1,54 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-// import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
-import { Book } from '../shared/book.model';
 @Injectable({
   providedIn: 'root',
 })
-export class CrudBooksService {
-  // url: string;
-  selectedBook: Book;
-  books: Book[];
-  // baseURL = 'http://localhost:5000/api/books';
-  baseURL = 'http://'
+export class bookService {
+  // private apiUrl = 'https://my-json-server.typicode.com/houcem-h/public_books_api/books';
+  private apiUrl = 'http://localhost:3000/api/books';
 
   constructor(private http: HttpClient) {}
 
-  postBook(book: Book) {
-    return this.http.post(this.baseURL, book);
+  /**
+   * Get all books
+   * @returns Observable<book[]>
+   */
+  all() {
+    return this.http.get(this.apiUrl);
   }
 
-  // getAllBooks(): Observable<Book[]> {
-  getAllBooks() {
-    return this.http.get(this.baseURL);
-    // .map((res: Response) => res.json());
+  /**
+   * Get a book with the given id
+   * @param id : book id
+   * @returns Observable<book>
+   */
+  get(id: string) {
+    return this.http.get(this.apiUrl + '/' + id);
   }
 
-  getBook(id) {
-    return this.http.get(`${this.baseURL}/${id}`);
-    // return this.http.get(`http://localhost:5000/api/books/${id}`);
+  /**
+   * Create a new book
+   * @param book new book to create
+   */
+  create(book: any) {
+    return this.http.post(this.apiUrl, book);
   }
 
-  putBook(boo: Book) {
-    return this.http.put(this.baseURL + `/${boo.book_id}`, boo);
+  /**
+   * Update a book with the given id
+   * @param id book id to update
+   * @param book new book data
+   */
+  update(id: string, book: any) {
+    return this.http.put(this.apiUrl + '/' + id, book);
   }
 
-  // addBook(book: Book):void {
-  //   return this.http.post(this.baseURL + '/', book)
-  // }
-  
-  // Mo Yousfi
-  // constructor(private http: HttpClient) {
-  //   this.url = 'http://localhost:5000/api';
-  // }
-  // // get Books
-  // public getBooks(): void {
-  //   let endPoints = '';
-  //   this.http.get(this.url + endPoints).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-
-  // // get Book by ID
-  // public getBookById() {
-  //   let id: number = 1;
-  //   let endPoints = '/books/' + id;
-  //   this.http.get(this.url + endPoints).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-  // // add new book
-  // public addBook(bookData: Object) {
-  //   let endPoints = '/books';
-  //   this.http.post(this.url + endPoints, bookData).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-
-  // // update the book
-  // public updateBook(bookData: Object) {
-  //   let endPoints = '/Books/1';
-  //   this.http.put(this.url + endPoints, bookData).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-
-  // // delete the book
-  // public deleteBook() {
-  //   let endPoints = '/Books/1';
-  //   this.http.delete(this.url + endPoints).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
+  /**
+   * Delete a book with the given id
+   * @param id book id to delete
+   */
+  delete(id: string) {
+    return this.http.delete(this.apiUrl + '/' + id);
+  }
 }
