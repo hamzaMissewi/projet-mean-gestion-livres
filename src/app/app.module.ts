@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
+import { BooksDetailsComponent } from './modules/books/books-details/Books-details.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { LocalStorageService } from './services/local-storage.service';
     LoginComponent,
     RegisterComponent,
     ListBooksComponent,
+    BooksDetailsComponent,
     // NavbarComponent,
   ],
   imports: [
@@ -33,9 +36,9 @@ import { LocalStorageService } from './services/local-storage.service';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
   ],
   providers: [CartService, LocalStorageService],
-  // providers: [CrudBooksService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

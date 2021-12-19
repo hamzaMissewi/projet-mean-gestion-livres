@@ -8,6 +8,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 // import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -28,9 +30,9 @@ const routes: Routes = [
   { path: 'home', component: HomeSectionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/books', pathMatch: 'full' },
   {
-    path: 'chariot',
+    path: 'cart',
     loadChildren: () =>
       import('./modules/cart/cart.module').then((m) => m.CartModule),
   },
@@ -47,6 +49,7 @@ const routes: Routes = [
   { path: '**', component: ErrorComponent },
 ];
 @NgModule({
+  // imports: [RouterModule.forRoot(routes), FormsModule, CommonModule],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
