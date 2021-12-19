@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 // import 'rxjs/add/operator/map';
 
-import { Book } from '../shared/book.model';
+import { Book } from '../../shared/book.model';
 @Injectable({
   providedIn: 'root',
 })
