@@ -10,8 +10,25 @@ import { LoginComponent } from './components/login/login.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component';
 
 const routes: Routes = [
+  { path: 'header', component: HeaderSectionComponent },
+  { path: 'home', component: HomeSectionComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/books', pathMatch: 'full' },
+  { path: 'hamzacart', component: HamzaCartComponent },
+  {
+    path: 'cart',
+    loadChildren: () =>
+      import('./modules/cart/cart.module').then((m) => m.CartModule),
+  },
+  {
+    path: 'books',
+    loadChildren: () =>
+      import('./modules/books/books.module').then((m) => m.BooksModule),
+  },
   {
     path: 'admin',
     component: AdminSectionComponent,
@@ -26,26 +43,11 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'header', component: HeaderSectionComponent },
-  { path: 'home', component: HomeSectionComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/books', pathMatch: 'full' },
-  {
-    path: 'cart',
-    loadChildren: () =>
-      import('./modules/cart/cart.module').then((m) => m.CartModule),
-  },
-  {
-    path: 'admin',
-    loadChildren: () =>
-      import('./modules/admin/admin.module').then((m) => m.AdminModule),
-  },
-  {
-    path: 'books',
-    loadChildren: () =>
-      import('./modules/books/books.module').then((m) => m.BooksModule),
-  },
+  // {
+  //   path: 'admin',
+  //   loadChildren: () =>
+  //     import('./modules/admin/admin.module').then((m) => m.AdminModule),
+  // },
   { path: '**', component: ErrorComponent },
 ];
 @NgModule({

@@ -11,14 +11,13 @@ import { RegisterComponent } from './components/register/register.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
-// import { CrudBooksService } from './services/crudBooks.service';
 import { FormsModule } from '@angular/forms';
 import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
-import { BooksDetailsComponent } from './modules/books/books-details/Books-details.component';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from './shared/filter.pipe';
 import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component';
+import { CartProductService } from './services/cart-product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,6 @@ import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component
     LoginComponent,
     RegisterComponent,
     ListBooksComponent,
-    BooksDetailsComponent,
     FilterPipe,
     HamzaCartComponent,
     // NavbarComponent,
@@ -42,7 +40,7 @@ import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component
     FormsModule,
     CommonModule,
   ],
-  providers: [CartService, LocalStorageService],
+  providers: [CartService, LocalStorageService, CartProductService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

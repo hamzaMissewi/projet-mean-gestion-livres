@@ -10,7 +10,9 @@ import {
   faTwitter,
   faTwitch,
 } from '@fortawesome/free-brands-svg-icons';
-import { CartService } from 'src/app/services/cart.service';
+
+import { CartProductService } from 'src/app/services/cart-product.service';
+// import { FakeApiService } from 'src/app/services/fake-api.service';
 @Component({
   selector: 'app-header-section',
   templateUrl: './header-section.component.html',
@@ -22,13 +24,22 @@ export class HeaderSectionComponent {
   youtube = faYoutube;
   twitch = faTwitch;
   twitter = faTwitter;
-
   shoppingBasket = faShoppingBasket;
   shoppingCart = faShoppingCart;
-  constructor(private cartService: CartService) {}
+
+  public totalItem: number = 0;
+  public searchItem!: string;
+  constructor(private hamzaCartService: CartProductService) {}
+
   ngOnInit(): void {
-    this.cartService.getProducts().subscribe((res) => {
+    this.hamzaCartService.getProducts().subscribe((res) => {
       this.totalItem = res.length;
     });
+  }
+
+  search(event: any) {
+    this.searchItem = (event.target as HTMLInputElement).value;
+    console.log(this.searchItem);
+    this.hamzaCartService.search.next(this.searchItem);
   }
 }
