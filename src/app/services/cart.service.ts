@@ -33,4 +33,8 @@ export class CartService {
     this.cartContent = [];
     this.localStorageService.set('cart', this.cartContent);
   }
+
+  // getProducts() {
+  // return this.productList.asObservable();
+  // }
 }

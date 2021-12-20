@@ -17,6 +17,8 @@ import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { BooksDetailsComponent } from './modules/books/books-details/Books-details.component';
 import { CommonModule } from '@angular/common';
+import { FilterPipe } from './shared/filter.pipe';
+import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { CommonModule } from '@angular/common';
     RegisterComponent,
     ListBooksComponent,
     BooksDetailsComponent,
+    FilterPipe,
+    HamzaCartComponent,
     // NavbarComponent,
   ],
   imports: [

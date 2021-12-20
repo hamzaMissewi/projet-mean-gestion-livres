@@ -10,6 +10,7 @@ import {
   faTwitter,
   faTwitch,
 } from '@fortawesome/free-brands-svg-icons';
+import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-header-section',
   templateUrl: './header-section.component.html',
@@ -24,6 +25,10 @@ export class HeaderSectionComponent {
 
   shoppingBasket = faShoppingBasket;
   shoppingCart = faShoppingCart;
-  constructor() {}
-  // ngOnInit(): void {}
+  constructor(private cartService: CartService) {}
+  ngOnInit(): void {
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalItem = res.length;
+    });
+  }
 }
