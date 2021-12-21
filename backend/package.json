@@ -4,6 +4,7 @@
   "description": "Fake Rest API for testing back",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "json:server": "json-server --watch db.json",
     "json:server:remote": "json-server http://jsonplaceholder.typicode.com/db"
   },

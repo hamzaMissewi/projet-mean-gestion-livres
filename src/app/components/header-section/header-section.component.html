@@ -2,49 +2,29 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Ninth navbar example">
   <div class="container-fluid">
     <img  src="../../../assets/images/logo-biblio.jpg" alt="" width="120" height="80" class="d-inline-block align-text-top mr-10">
-    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="/home">Home Page</a>
+    <a style="margin-left: 25px;" class="l-20 navbar-brand" routerLink="/home"><strong>Home Page</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="input-group bg-warning d-flex w-100">
+    <div class="collapse navbar-collapse navbar-dark" id="navbarSupportedContent">
+      <!-- <form class="input-group bg-warning d-flex w-100"> </form> -->
         <!-- <strong style="font-size: 30px;">Books Shop Culture</strong> -->
         <!-- <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
         </i> -->
-        <!-- <div class="form-group">
+        <form class="form-group navbar-brand align-item-center d-flex">
             <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products" >
-        </div>
-        <span class="fas fa-search search-icon"></span> -->
+          <fa-icon class="form-controle me-2 mt-2" id="search" [icon]="searchIcon"></fa-icon>  
+        </form>
+
+        <!-- <span class="fas fa-search search-icon"></span>
         <div class="form-group row-cols-md-2">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         </div>
-        <fa-icon class="form-controle me-2 mt-2" id="search" [icon]="searchIcon"></fa-icon>
-      </form>
+        <fa-icon class="form-controle me-2 mt-2" id="search" [icon]="searchIcon"></fa-icon> -->
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/home">Accueil</a>
         </li> -->
-        <li class="nav-item dropdown">
-          <!-- <a class="nav-link dropdown-toggle disabled" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="false"> -->
-          <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Espace Admin
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="/admin/add-book">Ajouter Livre</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/list-books">liste de Livres</a></li>
-            <li><a class="dropdown-item disabled" routerLink="/admin/delete">Supprimer Livre</a></li>
-            <!-- <li><hr class="dropdown-divider"></li> -->
-            <li><a class="dropdown-item disabled" routerLink="/admin/update" tabindex="-1" aria-disabled="true">Modifier Livre</a></li>
-          </ul>
-        </li>
-
-        <li>
-           <!-- <button class="btn btn-success" routerLink="/chariot"> -->
-             <button class="w-200 h-100 btn btn-white" routerLink="/chariot">
-             <!-- <i class="fas fa-shopping-cart" routerLink="/chariot"></i> -->
-             <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
-             </button>
-        </li>
         <!-- <br /> -->
         <li class="nav-item"><a class="nav-link active" routerLink="/login">Login</a></li>
         <li class="nav-item"><a class="nav-link active" routerLink="/register">Register</a></li>
@@ -57,7 +37,21 @@
           <a class="nav-link active" routerLink="/books">Books</a>
         </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact">Contact</a>
+        <a class="nav-link active" routerLink="/contact">Contact</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <!-- <a class="nav-link dropdown-toggle disabled" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="false"> -->
+        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Espace Admin
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" routerLink="/admin/add-book">Ajouter Livre</a></li>
+          <li><a class="dropdown-item" routerLink="/admin/list-books">liste de Livres</a></li>
+          <li><a class="dropdown-item disabled" routerLink="/admin/delete">Supprimer Livre</a></li>
+          <!-- <li><hr class="dropdown-divider"></li> -->
+          <li><a class="dropdown-item disabled" routerLink="/admin/update" tabindex="-1" aria-disabled="true">Modifier Livre</a></li>
+        </ul>
       </li>
     
     <!-- <a routerLink="/cart" class="btn btn-outline-success">
@@ -66,6 +60,11 @@
      
       <!-- <a routerLink="/hamzacart" class="btn btn-outline-success">
         Checkout</a> -->
+    <li>
+          <button class="w-200 h-100 btn btn-white" routerLink="/cart">
+          <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
+          </button>
+     </li>
       <button routerLink="/hamzacart" class="btn btn-primary">
           <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
           <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
@@ -94,7 +93,6 @@
         <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z" />
       </svg>
 
-        <!-- <i class="fa fa-facebook" aria-hidden="true"></i> -->
     </a>
   </div>
 </nav>

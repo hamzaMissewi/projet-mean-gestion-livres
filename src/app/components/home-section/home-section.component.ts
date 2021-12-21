@@ -23,16 +23,16 @@ export class HomeSectionComponent implements OnInit {
     // console.log(this.booksList);
     this.api.getProduct().subscribe((res) => {
       this.productList = res;
-      this.filterCategory = res;
-      this.productList.forEach((a: any) => {
-        if (
-          a.category === "women's clothing" ||
-          a.category === "men's clothing"
-        ) {
-          a.category = 'fashion';
-        }
-        Object.assign(a, { quantity: 1, total: a.price });
-      });
+      // this.filterCategory = res;
+      // this.productList.forEach((a: any) => {
+      //   if (
+      //     a.category === "women's clothing" ||
+      //     a.category === "men's clothing"
+      //   ) {
+      //     a.category = 'fashion';
+      //   }
+      //   Object.assign(a, { quantity: 1, total: a.price });
+      // });
       console.log(this.productList);
     });
 
@@ -45,7 +45,7 @@ export class HomeSectionComponent implements OnInit {
   }
   filter(category: string) {
     this.filterCategory = this.productList.filter((a: any) => {
-      if (a.category == category || category == '') {
+      if (a.category == category || category == 'Science') {
         return a;
       }
     });

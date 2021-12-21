@@ -28,7 +28,7 @@ export class HeaderSectionComponent implements OnInit {
   shoppingCart = faShoppingCart;
 
   public totalItem: number = 0;
-  public searchItem!: string;
+  public searchTerm!: string;
   constructor(private hamzaCartService: CartProductService) {}
 
   ngOnInit(): void {
@@ -38,8 +38,8 @@ export class HeaderSectionComponent implements OnInit {
   }
 
   search(event: any) {
-    this.searchItem = (event.target as HTMLInputElement).value;
-    console.log(this.searchItem);
-    this.hamzaCartService.search.next(this.searchItem);
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.hamzaCartService.search.next(this.searchTerm);
   }
 }
