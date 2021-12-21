@@ -15,11 +15,10 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col" *ngFor="let book of booksList">
           <div class="card shadow-sm">
-            <img [src]="book.imageUrl" [alt]="book.titre" width="320px" height="350px">
+            <img class="hamzaphoto" [src]="book.imageUrl" [alt]="book.titre">
 
             <div class="card-body">
               <h3>{{ book.titre }}</h3>
-              <!-- <p class="card-text">{{ book.description|slice:0:70 }} [...]</p> -->
               <p class="card-text">{{ book.auteur}} [...]</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span>{{book.stars}}</span>

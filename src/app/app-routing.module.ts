@@ -17,17 +17,17 @@ const routes: Routes = [
   { path: 'home', component: HomeSectionComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/books', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'hamzacart', component: HamzaCartComponent },
-  {
-    path: 'cart',
-    loadChildren: () =>
-      import('./modules/cart/cart.module').then((m) => m.CartModule),
-  },
   {
     path: 'books',
     loadChildren: () =>
       import('./modules/books/books.module').then((m) => m.BooksModule),
+  },
+  {
+    path: 'cart',
+    loadChildren: () =>
+      import('./modules/cart/cart.module').then((m) => m.CartModule),
   },
   {
     path: 'admin',

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import {
   faShoppingBasket,
@@ -18,7 +18,7 @@ import { CartProductService } from 'src/app/services/cart-product.service';
   templateUrl: './header-section.component.html',
   styleUrls: ['./header-section.component.css'],
 })
-export class HeaderSectionComponent {
+export class HeaderSectionComponent implements OnInit {
   searchIcon = faSearch;
   facebook = faFacebook;
   youtube = faYoutube;

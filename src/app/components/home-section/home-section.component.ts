@@ -1,47 +1,54 @@
 import { Component, OnInit } from '@angular/core';
+import { CartProductService } from 'src/app/services/cart-product.service';
+import { FakeApiService } from 'src/app/services/fake-api.service';
 import { booksData } from 'src/app/shared/dummy_data';
-// import { CrudBooksService } from 'src/app/services/book.service';
-// import { NgForm } from '@angular/forms';
-// import { Book } from 'src/app/shared/book.model';
 @Component({
   selector: 'app-home-section',
   templateUrl: './home-section.component.html',
   styleUrls: ['./home-section.component.css'],
-  // providers: [CrudBooksService],
 })
 export class HomeSectionComponent implements OnInit {
-  // public books: [];
   // public books: any;
-  public booksList = booksData;
+  // public booksList = booksData;
+  public productList: any;
+  public filterCategory: any;
+  searchKey: string = '';
 
   constructor(
-    // private booksDummyData: booksData,
-    // private booksService: CrudBooksService
+    private api: FakeApiService,
+    private cartService: CartProductService
   ) {}
 
-  ngOnInit() {
-    // this.books = this.booksDummyData.BooksArray;
-    // this.books = this.getLivresFromApi();
-    console.log(this.booksList)
+  ngOnInit(): void {
+    // console.log(this.booksList);
+    this.api.getProduct().subscribe((res) => {
+      this.productList = res;
+      this.filterCategory = res;
+      this.productList.forEach((a: any) => {
+        if (
+          a.category === "women's clothing" ||
+          a.category === "men's clothing"
+        ) {
+          a.category = 'fashion';
+        }
+        Object.assign(a, { quantity: 1, total: a.price });
+      });
+      console.log(this.productList);
+    });
+
+    this.cartService.search.subscribe((val: any) => {
+      this.searchKey = val;
+    });
   }
-
-  // getLivresFromApi(): void {
-  //   this.booksService.getAllBooks().subscribe(
-  //     (data: any) => {
-  //       this.books = data;
-  //       console.log('Response from Api is ', data);
-  //     },
-  //     (err) => {
-  //       console.log('error is ', err);
-  //     }
-  //   );
-  // }
-
-  // refreshBookList() {
-  //   this.booksService.getAllBooks().subscribe((res) => {
-  //     this.booksService.books = res as Book[];
-  //   });
-  // }
-
-  
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
+  }
+  filter(category: string) {
+    this.filterCategory = this.productList.filter((a: any) => {
+      if (a.category == category || category == '') {
+        return a;
+      }
+    });
+  }
 }
+
