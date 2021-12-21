@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { courses } from 'src/app/shared/courses-list';
-import { booksData } from 'src/app/shared/dummy_data';
+import { booksData } from 'src/app/shared/books-data';
 import { CartService } from 'src/app/services/cart.service';
 import { bookService } from 'src/app/services/book.service';
 @Component({

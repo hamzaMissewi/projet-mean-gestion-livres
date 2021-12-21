@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { bookService } from 'src/app/services/book.service';
 import { CartService } from 'src/app/services/cart.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { booksData } from 'src/app/shared/dummy_data';
+import { booksData } from 'src/app/shared/books-data';
 
 @Component({
   selector: 'app-books-details',

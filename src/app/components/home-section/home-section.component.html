@@ -13,7 +13,7 @@
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('framework web')">
+            <a (click)="filter('framework')">
                 <img style="margin-top: 5px;" src="https://solucase.com/wp-content/uploads/2018/12/web_framework.png" alt="">
                 <h6>Framework Dev</h6>
             </a>
@@ -22,6 +22,18 @@
             <a (click)="filter('economy')">
                 <img style="margin-top: 5px;" src="https://images-na.ssl-images-amazon.com/images/I/81vtt-9RnBL.jpg" alt="">
                 <h6>Economies</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('biography')">
+                <img style="margin-top: 5px;" src="https://images-na.ssl-images-amazon.com/images/I/611-M2a7w6L.jpg" alt="">
+                <h6>Biography</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('sport')">
+                <img style="margin-top: 5px;" src="https://medias.pourlascience.fr/api/v1/images/view/5d1b663a8fe56f77c8671165/wide_1300/image.jpg" alt="">
+                <h6>Sport</h6>
             </a>
         </div>
     </div>
@@ -41,18 +53,28 @@
 
     </div>
 </div> -->
+<br/> <br />
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productList">
-            <div class="card col-md-3">
+        <ng-container *ngFor="let item of booksHamzaList">
+        <!-- <ng-container *ngFor="let item of filterCategory | filter:searchKey:'titre'"> -->
+            <div class="card col-md-4 mb-3">
                 <img src="{{item.imageUrl}}" alt="">
-                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
-                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
-                <p><strong>Price:</strong> ${{item.prix}}</p>
-                <span>{{item.stars}}</span>
-                <small class="text-muted">{{ item.prix }}</small>
-                <small class="text-muted">{{ item.nbre_page }}</small>
-                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                <!-- <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.goal}}</p> -->
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.titre}}</h5>
+                <!-- <div *ngFor="let goal of {{item.goals}}">
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{goal}}</p>
+                </div> -->
+                <div class="content align-items-center flex-d">
+                    <p><strong>Price:</strong>prix amazon: {{item.prix }}</p> <br />
+                    <span>rating of people: {{item.stars}}</span> <br />
+                    <small class="text-muted">nombre de page : {{ item.nbre_page }}</small> <br />
+                    <small class="text-muted">reviews: {{ item.reviews }}</small> <br />
+                </div>
+               <div class="flex-row p-1">
+                <button routerLink="/" type="button" class="hamzabouton btn btn-success">Voir Détails</button>
+                <button class="hamzabouton btn btn-primary" (click)=addtocart(item)>Add to cart</button>       
+               </div>
             </div>
         </ng-container>
 

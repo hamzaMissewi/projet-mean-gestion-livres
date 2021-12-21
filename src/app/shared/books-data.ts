@@ -31,7 +31,7 @@ export const booksData = [
     prix: '500 $',
     reviews: 8228,
     stars: '⭐⭐⭐⭐',
-    category: 'science',
+    category: 'economics',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/41hV+q2UlkL._SY344_BO1,204,203,200_.jpg',
     published_date: '10/11/2005',
@@ -100,7 +100,7 @@ export const booksData = [
     prix: '26.94 $',
     reviews: 8228,
     stars: '4,5 ⭐',
-    category: 'Audio Book',
+    category: 'biography',
     imageUrl: 'https://m.media-amazon.com/images/I/51PsdEs6H9S.jpg',
     published_date: '10/11/2020',
     nbre_page: 50,
@@ -122,7 +122,7 @@ export const booksData = [
     prix: '20 $',
     reviews: 8228,
     stars: '⭐⭐⭐⭐⭐',
-    category: 'politics',
+    category: 'economics',
     imageUrl: 'https://m.media-amazon.com/images/I/41Y9jM-Le2L.jpg',
     published_date: '10/11/2020',
     nbre_page: 50,
@@ -144,7 +144,7 @@ export const booksData = [
     prix: '30.94 $',
     reviews: 8228,
     stars: '⭐⭐⭐',
-    category: 'Biography',
+    category: 'biography',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/71N7vj5cSkL._AC_UL210_SR195,210_.jpg',
     published_date: '10/9/2021',
@@ -167,7 +167,7 @@ export const booksData = [
     prix: '30.94 $',
     reviews: 8228,
     stars: '⭐⭐⭐⭐⭐',
-    category: 'Science',
+    category: 'science',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/41A3imtffCL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
     published_date: '10/12/2019',
@@ -190,7 +190,7 @@ export const booksData = [
     prix: '30.94 $',
     reviews: 4802,
     stars: '4,5 🌟',
-    category: 'Science',
+    category: 'science',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/61qbj4KwauL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
     published_date: '10/12/2019',
@@ -214,7 +214,7 @@ export const booksData = [
     reviews: 4802,
     stars: '🌟🌟🌟',
     // 🌟
-    category: 'Software framework',
+    category: 'framework',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/5189dK2traL._SX384_BO1,204,203,200_.jpg',
     published_date: '09/11/2020',
@@ -237,7 +237,7 @@ export const booksData = [
     prix: '59.5 $',
     reviews: 4802,
     stars: '4,5 ⭐',
-    category: 'Software framework',
+    category: 'framework',
     imageUrl: 'https://m.media-amazon.com/images/I/51BXdIhEe1L._SX260_.jpg',
     published_date: '09/11/2020',
     nbre_page: 60,
@@ -259,7 +259,7 @@ export const booksData = [
     prix: '15.24 $',
     reviews: 4802,
     stars: '⭐⭐⭐⭐',
-    category: 'Software framework',
+    category: 'framework',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/51tPFqRdrjL._SY445_SX342_QL70_FMwebp_.jpg',
     published_date: '09/11/2021',

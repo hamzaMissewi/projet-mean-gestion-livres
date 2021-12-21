@@ -8,9 +8,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 // import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { HamzaCartComponent } from './components/hamza-cart/hamza-cart.component';
+// import { FormsModule } from '@angular/forms';
+// import { CommonModule } from '@angular/common';
+import { HamzaCartComponent } from './components/product-cart/hamza-cart.component';
 
 const routes: Routes = [
   { path: 'header', component: HeaderSectionComponent },
