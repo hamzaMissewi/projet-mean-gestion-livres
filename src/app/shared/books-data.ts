@@ -2,6 +2,29 @@
 export const booksData = [
   // BooksArray = [
   {
+    id: '1000',
+    titre: 'math',
+    auteur: 'hamza missaoui',
+    category: 'science',
+    published_date: '10/5/1998',
+    reviews: 1997,
+    stars: '3,5 ⭐',
+    nbre_page: 20,
+    prix: '2.99 $',
+    imageUrl:
+      'https://m.media-amazon.com/images/P/B09NDJDMFL.01._SCLZZZZZZZ_SX500_.jpg',
+    goals: [
+      'Understand how computers work from inside out',
+      'Understand basic concepts of software programming (in Java, Python, PHP)',
+      'Fundamentals of databases, mobile apps and cloud computing',
+      'Write basic software programs and applications',
+    ],
+    requirements: [
+      'No technical prerequisites for this course.',
+      "I assume that you have used a computer and/or smartphones before, but I don't expect you to have any other technical knowledge.",
+    ],
+  },
+  {
     id: '1',
     titre: 'math',
     auteur: 'colby convigton',
@@ -13,16 +36,8 @@ export const booksData = [
     prix: '5 $',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/51n382CyioL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
-    goals: [
-      'Understand how computers work from inside out',
-      'Understand basic concepts of software programming (in Java, Python, PHP)',
-      'Fundamentals of databases, mobile apps and cloud computing',
-      'Write basic software programs and applications',
-    ],
-    requirements: [
-      'No technical prerequisites for this course.',
-      "I assume that you have used a computer and/or smartphones before, but I don't expect you to have any other technical knowledge.",
-    ],
+    goals: [],
+    requirements: [],
   },
   {
     id: '2',

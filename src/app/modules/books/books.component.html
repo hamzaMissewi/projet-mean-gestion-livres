@@ -26,9 +26,9 @@
                 <small class="text-muted">{{ book.prix }}</small>
                 <small class="text-muted">{{ book.nbre_page }}</small>
                 <div class="btn-group">
-                  <button [routerLink]="'/books/'+book.id" type="button"
+                  <button [routerLink]="'/books/'+book._id" type="button"
                     class="btn btn-sm btn-outline-secondary">Show</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                  <button (click)="addToCart(book._id)" type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
                 </div>
               </div>
             </div>

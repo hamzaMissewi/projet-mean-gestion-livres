@@ -6,7 +6,6 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
 import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-// import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 // import { FormsModule } from '@angular/forms';
 // import { CommonModule } from '@angular/common';
