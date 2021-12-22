@@ -10,17 +10,17 @@
   </section>
 
   <div class="album py-5 bg-light flex-wrap">
-    <div class="container">
+    <div class="container h-250">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col" *ngFor="let book of booksList">
           <div class="card shadow-sm">
-            <img class="hamzaphoto" [src]="book.imageUrl" [alt]="book.titre">
+            <img class="hamzaphoto p-2" [src]="book.imageUrl" [alt]="book.titre">
 
-            <div class="card-body">
+            <div class="card-body h-50">
               <h3>{{ book.titre }}</h3>
-              <p class="card-text">{{ book.auteur}} [...]</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text">{{ book.auteur}}</p>
+              <div class="d-flex justify-content-between">
                 <span>{{book.stars}}</span>
                 <!-- <small class="text-muted">{{ book.prix|currency:'EUR' }}</small> -->
                 <small class="text-muted">{{ book.prix }}</small>
@@ -28,8 +28,7 @@
                 <div class="btn-group">
                   <!-- <button [routerLink]="'/books/'+ book.id" type="button"
                     class="btn btn-sm btn-outline-secondary">Show</button> -->
-                    <button routerLink="/books/{{book.id}}" type="button"
-                    class="btn btn-sm btn-outline-secondary">Show</button>
+                  <button routerLink="/books/{{book.id}}" type="button" class="btn btn-sm btn-outline-secondary">Show</button>
                   <button (click)="addToCart(book.id)" type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
                 </div>
               </div>

@@ -1,7 +1,7 @@
-@media (max-width: 989px) and (min-width: 768px) {
-    .hamzaphoto {
-        width: 30%;
-        max-width: 50%;
-        height: 100%;
-    }
+/* @media (max-width: 989px) and (min-width: 768px) {} */
+
+.hamzaphoto {
+    /* width: 30%; */
+    width: 90%;
+    height: 300px;
 }
