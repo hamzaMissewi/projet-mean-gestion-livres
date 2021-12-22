@@ -16,24 +16,22 @@ export class BooksDetailsComponent implements OnInit {
   // public book: object = {};
 
   constructor(
-    private route: ActivatedRoute,
-    // private localStorageService: LocalStorageService,
-    private cartService: CartService,
-    private bookService: bookService
-  ) {}
+    private route: ActivatedRoute // private localStorageService: LocalStorageService, // private cartService: CartService,
+  ) // private bookService: bookService
+  {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       const bookId = params.get('id');
+<<<<<<< HEAD
       this.bookService.get(bookId!).subscribe((book) => (this.book = book));
       // this.book = booksData.filter((book) => book.id == bookId)[0];
       // LocalStorageService.getItem()
+=======
+      // this.bookService.get(bookId!).subscribe((book) => (this.book = book));
+      this.book = booksData.filter((book) => book.id == bookId)[0];
+>>>>>>> update
       // console.log(bookId)
-      // this.book = books.filter(book => book.id == bookId)[0];
-      // this.book = booksData.filter(book => book.id == bookId)[0];
     });
-  }
-  addToCart(id: string) {
-    this.cartService.add(id);
   }
 }

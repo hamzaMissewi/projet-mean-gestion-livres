@@ -62,9 +62,10 @@
                 <img src="{{item.imageUrl}}" alt="">
                 <!-- <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.goal}}</p> -->
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.titre}}</h5>
-                <!-- <div *ngFor="let goal of {{item.goals}}">
-                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{goal}}</p>
-                </div> -->
+                <div *ngFor="let goal of item?.goals">
+                    {{goal}}
+                <!-- <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{goal}}</p> -->
+                </div>
                 <div class="content align-items-center flex-d">
                     <p><strong>Price:</strong>prix amazon: {{item.prix }}</p> <br />
                     <span>rating of people: {{item.stars}}</span> <br />
