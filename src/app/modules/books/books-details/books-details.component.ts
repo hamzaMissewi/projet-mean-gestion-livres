@@ -23,14 +23,12 @@ export class BooksDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       const bookId = params.get('id');
-<<<<<<< HEAD
-      this.bookService.get(bookId!).subscribe((book) => (this.book = book));
-      // this.book = booksData.filter((book) => book.id == bookId)[0];
-      // LocalStorageService.getItem()
-=======
       // this.bookService.get(bookId!).subscribe((book) => (this.book = book));
       this.book = booksData.filter((book) => book.id == bookId)[0];
->>>>>>> update
+      // LocalStorageService.getItem()
+      // this.bookService.get(bookId!).subscribe((book) => (this.book = book));
+      this.book = booksData.filter((book) => book.id == bookId)[0];
+
       // console.log(bookId)
     });
   }
