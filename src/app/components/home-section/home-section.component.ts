@@ -8,14 +8,12 @@ import { booksData } from 'src/app/shared/books-data';
   styleUrls: ['./home-section.component.css'],
 })
 export class HomeSectionComponent implements OnInit {
-  // public books: any;
-  // public booksList = booksData;
-  public productList: any;
-  // public filterCategory: any;
+  // public productList: any;
+  public filterCategory: any;
   searchKey: string = '';
-
+  // public filterCategory = booksData;
   public booksHamzaList = booksData;
-  public filterCategory = (booksData[0].category = 'science');
+  // public filterCategory: any = (booksData[0].category = 'science');
   constructor(
     private api: FakeApiService,
     private cartService: CartProductService
@@ -23,8 +21,8 @@ export class HomeSectionComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log(this.booksList);
-    this.filterCategory;
     this.booksHamzaList.forEach((a: any) => {
+      // this.filterCategory = a.category;
       // if (
       //   a.category === "sport"
       // )
@@ -55,7 +53,10 @@ export class HomeSectionComponent implements OnInit {
     this.cartService.addtoCart(item);
   }
   filter(category: string) {
-    this.filterCategory = this.productList.filter((a: any) => {
+    // this.booksHamzaList.map((book) => { })
+    this.booksHamzaList.forEach((item) => console.log(item));
+    this.filterCategory = this.booksHamzaList.forEach((a: any) => {
+      console.log(a.cateogry);
       if (a.category == category || category == '') {
         return a;
       }

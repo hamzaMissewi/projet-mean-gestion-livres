@@ -1,17 +1,16 @@
-<h3>Books details</h3>
+<h3>books details</h3>
 <div class="card mb-3">
-  <img class="w-25 p-3 card-img-top imge" src="{{ book?.imageUrl }}" alt="{{ book?.titre }}">
-  <div class="card-img left">
-    <h5 class="card-title">{{ book?.titre }}</h5>
-    <p class="card-text"><strong>date de publication :</strong> {{ book?.published_date }}.</p>
-  </div>
-  <br />
-  <div class="card-body right">
-    <!-- <h4 class="card-title">{{ book?.titre }}</h4> -->
-    <p class="pl-3 card-text"><strong>réalisé par :</strong> {{ book?.auteur }}.</p>
-    <p class="pl-3 card-text"><strong>Description:</strong> {{ book?.description }}.</p>
-    <!-- <p class="card-text"><strong>Price:</strong> {{ book?.prix|currency }}.</p> -->
-    <p class="card-text"><strong>Goals:</strong></p>
+  <img src="{{ book?.imageUrl }}" class="card-img-top imge" alt="{{ book?.titre }}">
+  <!-- <div class="card-img-overlay">
+    <span class="card-title bg-col-red">{{ book?.titre }}</span>
+  </div> -->
+  <div class="card-body">
+    <span class="card-title">{{ book?.titre }}</span>
+    <p class="card-text"><strong>Auteur:</strong> {{ book?.auteur }}.</p>
+    <p class="card-text"><strong>Instructor:</strong> {{ book?.category }}.</p>
+    <p class="card-text"><strong>Language:</strong> {{ book?.published_date }}.</p>
+    <p class="card-text"><strong>Price:</strong> {{ book?.prix|currency }}.</p>
+    <p class="card-text"><strong>Goals:</strong> {{ book?.nbre_page}}</p>
     <ul>
       <li *ngFor="let goal of book?.goals">{{ goal }}</li>
     </ul>
@@ -19,7 +18,12 @@
     <ul>
       <li *ngFor="let requirement of book?.requirements">{{ requirement }}</li>
     </ul>
+    <!-- <p class="card-text text-end"><small class="text-muted">Last updated: {{ book?.last_update }}</small></p> -->
+
     <p class="card-text text-end"><small class="text-muted">people ratings: {{ book?.stars }}</small></p>
     <p class="card-text text-end"><small class="text-muted">Last updated: {{ book?.reviews }}</small></p>
+
   </div>
+  <button routerLink="/home" type="button" class="btn btn-sm btn-outline-secondary">Go back</button>
 </div>
+

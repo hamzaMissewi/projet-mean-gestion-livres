@@ -6,7 +6,6 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
 import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-// import { BooksComponent } from '../../fichiers-extra/books/books.component';
 import { ListBooksComponent } from './components/list-books/list-books.component';
 // import { FormsModule } from '@angular/forms';
 // import { CommonModule } from '@angular/common';
@@ -24,25 +23,26 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/books/books.module').then((m) => m.BooksModule),
   },
-  {
-    path: 'cart',
-    loadChildren: () =>
-      import('./modules/cart/cart.module').then((m) => m.CartModule),
-  },
-  {
-    path: 'admin',
-    component: AdminSectionComponent,
-    children: [
-      {
-        path: 'add-book',
-        component: AdminSectionComponent,
-      },
-      {
-        path: 'list-books',
-        component: ListBooksComponent,
-      },
-    ],
-  },
+  // {
+  //   path: 'cart',
+  //   loadChildren: () =>
+  //     import('./modules/cart/cart.module').then((m) => m.CartModule),
+  // },
+  // {
+  //   path: 'admin',
+  //   component: AdminSectionComponent,
+  //   children: [
+  //     {
+  //       path: 'add-book',
+  //       component: AdminSectionComponent,
+  //     },
+  //     {
+  //       path: 'list-books',
+  //       component: ListBooksComponent,
+  //     },
+  //   ],
+  // },
+
   // {
   //   path: 'admin',
   //   loadChildren: () =>

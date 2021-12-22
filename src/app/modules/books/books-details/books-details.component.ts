@@ -25,6 +25,9 @@ export class BooksDetailsComponent implements OnInit {
       const bookId = params.get('id');
       // this.bookService.get(bookId!).subscribe((book) => (this.book = book));
       this.book = booksData.filter((book) => book.id == bookId)[0];
+      // LocalStorageService.getItem()
+      // this.bookService.get(bookId!).subscribe((book) => (this.book = book));
+
       // console.log(bookId)
     });
   }

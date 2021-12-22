@@ -37,20 +37,19 @@
         <a class="nav-link active" routerLink="/contact">Contact</a>
       </li> -->
 
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle active" routerLink="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="false">
-        <!-- <a class="nav-link dropdown-toggle active" routerLink="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
           Admin
         </a>
         <ul class="dropdown-menu active"  aria-labelledby="navbarDropdown">
-          <!-- <li><a class="dropdown-item" routerLink="/admin/list-books">liste de Livres</a></li> -->
+          <li><a class="dropdown-item" routerLink="/admin/list-books">liste de Livres</a></li>
           <li><a class="dropdown-item" routerLink="/books">liste de Livres</a></li>
           <li><a class="dropdown-item disabled" routerLink="/admin/add-book">Ajouter Livre</a></li>
           <li><a class="dropdown-item disabled" routerLink="/admin/delete">Supprimer Livre</a></li>
-          <!-- <li><hr class="dropdown-divider"></li> -->
+          <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item disabled" routerLink="/admin/update" tabindex="-1" aria-disabled="true">Modifier Livre</a></li>
         </ul>
-      </li>
+      </li> -->
     
     <!-- <a routerLink="/cart" class="btn btn-outline-success">
       Checkout
@@ -63,13 +62,13 @@
           <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
           </button>
      </li> -->
-      <li routerLink="/hamzacart" class="btn btn-primary">
+        <li routerLink="/hamzacart" class="btn btn-primary">
           <!-- <i style="font-size: 15px;" class="fas fa-cart-plus"></i> -->
           <button class="w-150 h-120 btn btn-white" routerLink="/cart">
             <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
-            </button>
-          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
-          </li>
+          </button>
+          <span style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</span>
+        </li>
       </ul>
 
     </div>

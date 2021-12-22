@@ -10,7 +10,7 @@ export class FakeApiService {
 
   getProduct() {
     // https://fakestoreapi.com/products
-    // after running json-server --watch db.json in backend folder you will see books list sir
+    // after running "json-server --watch db.json" in backend folder you will see books list sir
     return this.http.get<any>('http://localhost:3000/books').pipe(
       map((res: any) => {
         return res;
