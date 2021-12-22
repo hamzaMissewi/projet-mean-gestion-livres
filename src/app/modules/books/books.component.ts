@@ -31,14 +31,4 @@ export class BooksComponent implements OnInit {
   public addToCart(id: string) {
     this.cartService.add(id);
   }
-  // public addToCart(id: string) {
-  // alert('add to cart');
-  // alert(id)
-  // api global web stockage
-  // local storage vs session storage
-  // this.cartContent.push(id);
-  // const course = this.cartContent.filter([]);
-  // localStorage.setItem('cart', this.cartContent.toString());
-  // localStorage.setItem('cart', JSON.stringify(this.cartContent));
-  // }
 }
