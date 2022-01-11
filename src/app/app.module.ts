@@ -16,7 +16,7 @@ import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from './shared/filter.pipe';
-import { HamzaCartComponent } from './components/product-cart/hamza-cart.component';
+import { HamzaCartComponent } from './components/books-cart/hamza-cart.component';
 import { CartProductService } from './services/cart-product.service';
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { CartProductService } from './services/cart-product.service';
     ListBooksComponent,
     FilterPipe,
     HamzaCartComponent,
-    // NavbarComponent,
   ],
   imports: [
     BrowserModule,

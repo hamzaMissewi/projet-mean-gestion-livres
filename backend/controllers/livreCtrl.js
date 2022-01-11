@@ -1,4 +1,6 @@
 const Book = require("../models/livre");
+const authUser = require("./authUser");
+const User = require("../models/userModel");
 
 // get all books
 exports.all = (req, res) => {
@@ -38,3 +40,4 @@ exports.delete = (req, res, next) => {
     .then(() => res.status(200).json({ message: "livre deleted !" }))
     .catch((error) => res.status(400).json({ error }));
 };
+

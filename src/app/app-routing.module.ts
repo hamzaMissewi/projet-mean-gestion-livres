@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminSectionComponent } from './modules/admin/admin-section/admin-section.component';
+// import { AdminSectionComponent } from './modules/admin/admin-section/admin-section.component';
 import { HomeSectionComponent } from './components/home-section/home-section.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { ListBooksComponent } from './components/list-books/list-books.component';
+// import { ListBooksComponent } from './components/list-books/list-books.component';
 // import { FormsModule } from '@angular/forms';
 // import { CommonModule } from '@angular/common';
-import { HamzaCartComponent } from './components/product-cart/hamza-cart.component';
+import { HamzaCartComponent } from './components/books-cart/hamza-cart.component';
 
 const routes: Routes = [
   { path: 'header', component: HeaderSectionComponent },

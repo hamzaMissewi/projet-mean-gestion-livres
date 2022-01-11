@@ -53,14 +53,14 @@ export class HomeSectionComponent implements OnInit {
     this.cartService.addtoCart(item);
   }
   filter(category: string) {
-    // this.booksHamzaList.map((book) => { })
     this.booksHamzaList.forEach((item) => console.log(item));
-    this.filterCategory = this.booksHamzaList.forEach((a: any) => {
-      console.log(a.cateogry);
-      if (a.category == category || category == '') {
+    this.filterCategory = this.booksHamzaList.filter((a: any) => {
+      console.log(a.category);
+      if (a.category === category || category == '') {
         return a;
       }
     });
+    // return this.filterCategory;
   }
 }
 

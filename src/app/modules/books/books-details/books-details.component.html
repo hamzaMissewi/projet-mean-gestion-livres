@@ -4,13 +4,20 @@
   <!-- <div class="card-img-overlay">
     <span class="card-title bg-col-red">{{ book?.titre }}</span>
   </div> -->
-  <div class="card-body">
-    <span class="card-title">{{ book?.titre }}</span>
-    <p class="card-text"><strong>Auteur:</strong> {{ book?.auteur }}.</p>
-    <p class="card-text"><strong>Instructor:</strong> {{ book?.category }}.</p>
-    <p class="card-text"><strong>Language:</strong> {{ book?.published_date }}.</p>
-    <p class="card-text"><strong>Price:</strong> {{ book?.prix|currency }}.</p>
-    <p class="card-text"><strong>Goals:</strong> {{ book?.nbre_page}}</p>
+  <div class="card-body hamza-css">
+    <div class="group1">
+      <p class="card-text"><strong>titre livre: </strong> <span class="card-title">{{ book?.titre }}</span></p>
+      <p class="card-text"><strong>Auteur:</strong> {{ book?.auteur }}.</p>
+    </div>
+    <div class="group1">
+      <p class="card-text"><strong>categorie livre:</strong> {{ book?.category }}</p>
+      <p class="card-text"><strong>date de publication:</strong> {{ book?.published_date }}</p>
+    </div>
+    <div class="group1">
+      <p class="card-text"><strong>prix:</strong> {{ book?.prix }}</p>
+      <p class="card-text"><strong>nbre de page:</strong> {{ book?.nbre_page}}</p>
+    </div>
+    <!-- <div class="group1"> -->
     <ul>
       <li *ngFor="let goal of book?.goals">{{ goal }}</li>
     </ul>
@@ -19,11 +26,13 @@
       <li *ngFor="let requirement of book?.requirements">{{ requirement }}</li>
     </ul>
     <!-- <p class="card-text text-end"><small class="text-muted">Last updated: {{ book?.last_update }}</small></p> -->
-
-    <p class="card-text text-end"><small class="text-muted">people ratings: {{ book?.stars }}</small></p>
-    <p class="card-text text-end"><small class="text-muted">Last updated: {{ book?.reviews }}</small></p>
-
-  </div>
+    <!-- </div> -->
+    <div class="group1">
+      <p class="card-text text-end"><small class="text-muted">people ratings: {{ book?.stars }}</small></p>
+      <p class="card-text text-end"><small class="text-muted">Last updated: {{ book?.reviews }}</small></p>
+    </div>
+   
+  </div> <br/>
   <button routerLink="/home" type="button" class="btn btn-sm btn-outline-secondary">Go back</button>
 </div>
 

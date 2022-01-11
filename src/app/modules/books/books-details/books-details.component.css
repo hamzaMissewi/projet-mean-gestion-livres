@@ -9,3 +9,19 @@
 .span {
     background-color: red;
 }
+
+.hamza-css {
+    display: flex;
+    /* outline: none; */
+    flex-direction: column;
+    flex: -1;
+}
+
+.group1 {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
