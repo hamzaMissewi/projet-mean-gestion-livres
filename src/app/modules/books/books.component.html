@@ -1,24 +1,28 @@
 <main>
-
-  <section class="py-5 text-center container">
+  <!-- <section class="py-5 text-center container"> -->
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Welcome to Mediathéque </h1>
         <p class="lead text-muted">vous trouverez votre livre préferé ici et pouvez acheter en quelques clicks avec n'importe quel moyen de paiement, ajouter au panier,supprimer ou changer la quantité d'un tel livre </p>
       </div>
     </div>
-  </section>
+  <!-- </section> -->
 
   <div class="album py-5 bg-light flex-wrap">
     <div class="container h-250">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-4 row-cols-sm-1 row-cols-md-2 g-3">
+      <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" routerLinkActive="active"> -->
         <div class="col" *ngFor="let book of booksList">
           <div class="card shadow-sm">
-            <img class="hamzaphoto p-2" [src]="book.imageUrl" [alt]="book.titre">
+            <!-- <a routerLink="/books/{{book.id}}"> -->
+              <img class="hamzaphoto p-2" [src]="book.imageUrl" [alt]="book.titre"/>
+            <!-- </a> -->
 
             <div class="card-body h-50">
+              <a routerLink="/books/{{book.id}}">
               <h3>{{ book.titre }}</h3>
+              </a>
               <p class="card-text">{{ book.auteur}}</p>
               <div class="d-flex justify-content-between">
                 <span>{{book.stars}}</span>
@@ -30,8 +34,6 @@
                     class="btn btn-sm btn-outline-secondary">Show</button> -->
                   <button routerLink="/books/{{book.id}}" type="button" class="btn btn-sm btn-outline-secondary">Show</button>
                   <button (click)="addToCart(book.id)" type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
-
-
                 </div>
               </div>
             </div>

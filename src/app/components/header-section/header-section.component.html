@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Ninth navbar example">
   <div class="container-fluid">
     <img  src="../../../assets/images/logo-biblio.jpg" alt="logo-biblio" width="100" height="80" class="d-inline-block align-text-top mr-10">
-    <a style="margin-left: 15px;" class="ml-20 navbar-brand" routerLink="/home">Home Page</a>
+    <a style="margin-left: 15px;" class="ml-20 navbar-brand" routerLink="/home">Books Library</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,8 +12,9 @@
         <!-- <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
         </i> -->
         <form class="form-group navbar-brand align-item-center d-flex  bg-dark">
-            <input type="text" class="form-control hamzainputclass" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products" /> &nbsp;
-          <fa-icon class="form-controle me-2 mt-1" id="search" [icon]="searchIcon"></fa-icon>  
+            <input type="text" class="form-control hamzainputclass" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="chercher livres maintenant ça marche" /> 
+            &nbsp;
+          <fa-icon class="form-controle me-2 p-1 bg-danger" id="search" [icon]="searchIcon"></fa-icon>  
         </form>
 
         <!-- <span class="fas fa-search search-icon"></span>
@@ -62,13 +63,13 @@
           <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
           </button>
      </li> -->
-        <li routerLink="/hamzacart" class="btn btn-primary">
+        <!-- <li routerLink="/hamzacart" class="btn btn-primary"> -->
           <!-- <i style="font-size: 15px;" class="fas fa-cart-plus"></i> -->
-          <button class="w-150 h-120 btn btn-white" routerLink="/cart">
-            <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(153, 243, 255, 0.822)" aria-hidden="true"></fa-icon>
+          <button style="font-size: 20px;" class=" btn btn-primary fas fa-cart-plus" routerLink="/hamzacart">
+            <fa-icon [icon] = "shoppingCart" class="bg-grey" style="color:rgba(0, 0, 0, 0.822)" aria-hidden="true"></fa-icon>
           </button>
           <span style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</span>
-        </li>
+        <!-- </li> -->
       </ul>
 
     </div>

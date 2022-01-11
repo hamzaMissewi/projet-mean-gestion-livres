@@ -13,5 +13,9 @@
 }
 
 .hamzainputclass {
-    width: 150px;
+    width: 500px;
+}
+
+input {
+    width: 250px;
 }

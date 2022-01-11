@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+import { LocalStorageService } from './local-storage.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,8 +8,15 @@ export class CartProductService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>('');
+  public cartContent: any[] = [];
 
-  constructor() {}
+  constructor(private localStorageService: LocalStorageService) {
+    this.cartContent = this.load();
+  }
+  load() {
+    return this.localStorageService.get('cart');
+  }
+
   getProducts() {
     return this.productList.asObservable();
   }

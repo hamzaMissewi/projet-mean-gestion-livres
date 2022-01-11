@@ -59,7 +59,7 @@
         <ng-container *ngFor="let item of booksHamzaList | filter:searchKey:'titre'">
         <!-- <ng-container *ngFor="let item of filterCategory | filter:searchKey:'titre'"> -->
             <div class="card col-md-4 mb-3">
-                <img src="{{item.imageUrl}}" alt="">
+                <img src="{{item.imageUrl}}" alt="" [routerLink]="'/books/' + item.id" />
                 <!-- <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.goal}}</p> -->
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.titre}}</h5>
                 <div *ngFor="let goal of item?.goals">
@@ -72,9 +72,9 @@
                     <small class="text-muted">nombre de page : {{ item.nbre_page }}</small> <br />
                     <small class="text-muted">reviews: {{ item.reviews }}</small> <br />
                 </div>
-               <div class="flex-row p-1">
-                <button [routerLink]="'/books/' + item.id" type="button" class="hamzabouton btn btn-success">Voir Détails</button>
-                <button class="hamzabouton btn btn-primary" (click)=addtocart(item)>Add to cart</button>       
+               <div class="flex-row p-1 mt-auto hamzabouton">
+                <button [routerLink]="'/books/' + item.id" type="button" class="btn btn-success">Voir Détails</button> &nbsp; &nbsp;
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>       
                </div>
             </div>
         </ng-container>

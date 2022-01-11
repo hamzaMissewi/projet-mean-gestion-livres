@@ -52,5 +52,7 @@ button {
 /* hamza */
 .hamzabouton {
   justify-content: space-between;
+  position: relative;
+  bottom: 0;
 }
 

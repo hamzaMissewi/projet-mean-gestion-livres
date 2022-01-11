@@ -9,7 +9,9 @@
 
 # dependencies
 /node_modules
-/fichiers-extra
+/app/components/navbar-test/
+/app/components/home-section/other_test/
+
 e2e/
 
 # profiling files
