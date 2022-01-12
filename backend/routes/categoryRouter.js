@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const categoryController = require("./../controllers/categCtrl");
+const categController = require("../controllers/autre-test/categCtrl");
 
-router.get("/", categoryController.all);
-router.get("/:id", categoryController.get);
-router.post("/", categoryController.create);
-router.put("/:id", categoryController.update);
-router.delete("/:id", categoryController.delete);
+router.get("/", categController.all);
+router.get("/:id", categController.get);
+router.post("/", categController.create);
+router.put("/:id", categController.update);
+router.delete("/:id", categController.delete);
 
 module.exports = router;

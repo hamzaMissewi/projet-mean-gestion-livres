@@ -1,28 +1,24 @@
 const express = require("express");
-require('dotenv').config()
+// require('dotenv').config()
 const mongoose = require("mongoose");
-const cors = require('cors')
-
+// const cors = require('cors')
+const userRouter = require('./routes/userRouter')
+const booksRouter = require('./routes/booksRouter')
+const mongoose = require("mongoose")
 const app = express();
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
 // supposant etre en fichier .env
+// MONGODB_URL = "..."
 var hamzaDB = "mongodb+srv://hamza:shadowfight@cluster0.x6iqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 // mongoose.connect("mongodb://localhost:27017/biblio-mean-hamza", {
   mongoose.connect(hamzaDB, {
-    useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => console.log("Connected successfully to MongoDB !"))
   .catch(() => console.log("Connection failed to MongoDB !"));
-
-  // autre ecriture de mongo
-  // const conSuccess = mongoose.connection
-  // conSuccess.once('open', _ => {
-  //   console.log('Database connected:', hamzaDB);
-  // })
 
 
 app.use((req, res, next) => {
@@ -38,24 +34,24 @@ app.use((req, res, next) => {
   next();
 });
 
-// Routes
-app.get("/api/books", (req, res) => {
-  Course.find()
-    .then((books) => res.status(200).json(books))
-    .catch((err) => res.status(400).json({ message: err.message }));
-});
+// app.get("/api/books", (req, res) => {
+//   Course.find()
+//     .then((books) => res.status(200).json(books))
+//     .catch((err) => res.status(400).json({ message: err.message }));
+// });
 
-// app.use('/user', require('./routes/userRouter'))
-
-app.use('/api', require('./routes/bookRouter'))
-
-// test request 
 
 app.use((req, res) => {
   res.json({ message: "This is hamza test backend response" });
 });
 
+// Routes 
 
+// app.use('/user', require('./routes/userRouter'))
+// app.use('/api', require('./routes/bookRouter'))
+
+app.use('/api/books', booksRouter)
+app.use('/api/auth', userRouter)
 // const PORT = process.env.PORT || 5000;
 // app.listen(PORT, ()=>{
 //   console.log('Server work on 5001');
