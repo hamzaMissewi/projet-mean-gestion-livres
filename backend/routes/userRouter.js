@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 // const router = require("express").Router();
-const authUser = require("./authUser");
-const User = require("../models/userModel");
 
 // register : create account
 router.post("/register", async (req, res) => {
