@@ -1,8 +1,7 @@
 const Book = require("../models/livre");
-const authUser = require("./authUser");
-const User = require("../models/userModel");
-
+// 
 // get all books
+// router.get('/', (req, res)=> {})
 exports.all = (req, res) => {
   Book.find()
     .then((books) => res.status(200).json(books))
@@ -10,6 +9,7 @@ exports.all = (req, res) => {
 };
 
 // get a book by id
+// router.get('/:id', (req,res,next) => {})
 exports.get = (req, res, next) => {
   Book.findOne({ _id: req.params.id })
     .then((book) => res.status(200).json(book))
@@ -17,6 +17,8 @@ exports.get = (req, res, next) => {
 };
 
 // add new book to mediateque
+// router.post('/:id', (req,res,next) => {})
+
 exports.create = (req, res, next) => {
   const book = new Book({
     ...req.body,
