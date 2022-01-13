@@ -1,0 +1,66 @@
+<section class="content">
+  <!-- Default box -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Listes</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <!-- /.id="example1" -->
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>Nom du livre</th>
+                  <th>Nom du livre</th>
+                  <th>Categorie</th>
+                  <th>Prix(s)</th>
+                  <th>Date</th>
+                  <th>Modification</th>
+                  <th>Supprimer</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let livre of livres">
+                <tr>
+                  <td>{{ livre.id }}</td>
+                  <td>{{ livre.auteur }}</td>
+                  <td>{{ livre.categorie }}</td>
+                  <td>{{ livre.prix }}</td>
+                  <td>{{ livre.date }}</td>
+                  <td>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      value="Modifier"
+                      routerLink="/modlivre"
+                    >
+                      Modifier
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      value="Supprimer"
+                      (click)="supprimerLivre(livre)"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+  <!-- /.card -->
+</section>

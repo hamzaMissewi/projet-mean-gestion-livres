@@ -1,0 +1,103 @@
+<!-- Main content -->
+<section class="content">
+  <div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Produits</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form onsubmit="return false">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">nom du Livres</label>
+          <input
+            type="text"
+            onclick="green()"
+            class="form-control"
+            [(ngModel)]="currentLivre.nom"
+            [ngModelOptions]="{standalone: true}"
+            placeholder="Enter le nom du livre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">nom de l'auteur</label>
+          <input
+            type="text"
+            onclick="green()"
+            class="form-control"
+            [(ngModel)]="currentLivre.auteur"
+            [ngModelOptions]="{standalone: true}"
+            placeholder="Enter le nom du livre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Prix</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="currentLivre.prix"
+              [ngModelOptions]="{standalone: true}"
+              placeholder="le Prix du livre"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">dt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Date </label>
+          <input
+            type="date"
+            class="form-control"
+            [(ngModel)]="currentLivre.date"
+            [ngModelOptions]="{standalone: true}"
+            placeholder=" Date de publication"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Categorie</label>
+          <select
+            class="custom-select form-control-border border-width-2"
+            [(ngModel)]="currentLivre.categorie"
+            [ngModelOptions]="{standalone: true}"
+          >
+            <option>Romance</option>
+            <option>developpemnt</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Description du Livre</label>
+          <textarea
+            class="form-control"
+            rows="3"
+            [(ngModel)]="currentLivre.description"
+            [ngModelOptions]="{standalone: true}"
+            placeholder="Enter ..."
+          ></textarea>
+        </div>
+      </div>
+      <!-- /.card-body -->
+
+      <div class="card-footer">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          value="Update"
+          (click)="updateLivre()"
+        >
+          Update
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- /.container-fluid -->
+</section>
