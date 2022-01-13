@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const livreCtrl = require("../controllers/livreCtrl");
+const livreCtrl = require("../controllers/booksCtrl");
 
 router.get("/", livreCtrl.all);
 router.get("/:id", livreCtrl.get);

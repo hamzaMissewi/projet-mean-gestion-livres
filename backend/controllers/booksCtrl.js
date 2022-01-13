@@ -1,4 +1,4 @@
-const Book = require("./../models/livre");
+const Book = require("../models/livre");
 // 
 // get all books
 // router.get('/', (req, res)=> {})
