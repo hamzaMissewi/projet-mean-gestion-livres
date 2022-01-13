@@ -1,11 +1,11 @@
-const Book = require("../models/livre");
+const Book = require("./../models/livre");
 // 
 // get all books
 // router.get('/', (req, res)=> {})
 exports.all = (req, res) => {
   Book.find()
     .then((books) => res.status(200).json(books))
-    .catch((err) => res.status(400).json({ message: err.message }));
+    .catch((err) => res.status(400).json({ error: err.message }));
 };
 
 // get a book by id
@@ -43,5 +43,5 @@ exports.delete = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
-module.exports = livreCtrl;
+// module.exports = livreCtrl;
 
