@@ -1,4 +1,4 @@
-const User = require("./../models/livre")
+const User = require("../../models/livre")
 // register : create account
 router.post("/register", async (req, res) => {
     //  partie crud application rest api youtube
@@ -13,7 +13,7 @@ router.post("/register", async (req, res) => {
       await user.generateToken();
       res.send(userdb);
       // res.status(200).send(user);
-    } catch (e) {
+    } catch (e) { 
       console.log(e);
       res.status(500).send();
     }

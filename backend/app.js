@@ -4,16 +4,16 @@ const mongoose = require("mongoose");
 // const cors = require('cors')
 const userRouter = require('./routes/userRouter')
 const booksRouter = require('./routes/booksRouter')
-const mongoose = require("mongoose")
+// const categRouter = require('./routes/categoryRouter')
 const app = express();
-app.use(express.json())
+// app.use(express.json())
 // app.use(cors())
 
 // supposant etre en fichier .env
 // MONGODB_URL = "..."
 var hamzaDB = "mongodb+srv://hamza:shadowfight@cluster0.x6iqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 // mongoose.connect("mongodb://localhost:27017/biblio-mean-hamza", {
-  mongoose.connect(hamzaDB, {
+  mongoose.connect("mongodb+srv://hamza:shadowfight@cluster0.x6iqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -51,6 +51,7 @@ app.use((req, res) => {
 // app.use('/api', require('./routes/bookRouter'))
 
 app.use('/api/books', booksRouter)
+// app.use('/api/categ', categRouter)
 app.use('/api/auth', userRouter)
 // const PORT = process.env.PORT || 5000;
 // app.listen(PORT, ()=>{

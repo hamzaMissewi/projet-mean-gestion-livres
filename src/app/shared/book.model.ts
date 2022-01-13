@@ -1,12 +1,13 @@
-export class Book {
-  book_id: string;
-  title: string;
-  price: number;
-  postedBy: string;
-  dateCreated: Date;
-  // category: Object;
+export interface Book {
+  id: string;
+  titre: string;
+  auteur: string;
+  prix: number;
+  stars: string;
   category: string;
-  quantite: number;
-  nbrePages: number;
-  profilePic: string;
+  nbre_page: number;
+  // category: Object;
+  imageUrl: string;
+  details: [];
+  requirements: [];
 }

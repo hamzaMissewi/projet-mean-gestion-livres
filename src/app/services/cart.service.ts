@@ -16,7 +16,7 @@ export class CartService {
     const course = this.cartContent.filter((elem) => elem.id == productId)[0];
     if (course) {
       course.quantity++;
-    } else {
+    } else { 
       this.cartContent.push({ id: productId, quantity: 1 });
     }
     this.localStorageService.set('cart', this.cartContent);

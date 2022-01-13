@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
 @Pipe({
   name: 'filter',
 })
@@ -9,7 +8,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 //   transform(value: unknown, ...args: unknown[]): unknown {
 //     return null;
 //   }
-
 // }
 export class FilterPipe implements PipeTransform {
   transform(value: any[], filterString: string, propName: string): any[] {

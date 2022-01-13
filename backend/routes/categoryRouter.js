@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const categController = require("../controllers/autre-test/categCtrl");
+const categController = require("../controllers/categCtrl");
 
 router.get("/", categController.all);
 router.get("/:id", categController.get);

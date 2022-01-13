@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { bookService } from 'src/app/services/book.service';
 import { CartService } from 'src/app/services/cart.service';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+// import { LocalStorageService } from 'src/app/services/local-storage.service';
+import {Book} from '../../../shared/book.model'
 import { booksData } from 'src/app/shared/books-data';
 
 @Component({
@@ -12,8 +13,7 @@ import { booksData } from 'src/app/shared/books-data';
 })
 export class BooksDetailsComponent implements OnInit {
   public book?: any;
-  // public book?: object;
-  // public book: object = {};
+  // public book?: Book;
 
   constructor(
     private route: ActivatedRoute // private localStorageService: LocalStorageService, // private cartService: CartService,

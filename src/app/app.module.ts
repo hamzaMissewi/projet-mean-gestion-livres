@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { CartService } from './services/cart.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { CommonModule } from '@angular/common';
-import { FilterPipe } from './shared/filter.pipe';
+// import { FilterPipe } from './shared/others-test/filter.pipe';
 import { HamzaCartComponent } from './components/books-cart/hamza-cart.component';
 import { CartProductService } from './services/cart-product.service';
 @NgModule({
@@ -28,7 +28,7 @@ import { CartProductService } from './services/cart-product.service';
     LoginComponent,
     RegisterComponent,
     ListBooksComponent,
-    FilterPipe,
+    // FilterPipe,
     HamzaCartComponent,
   ],
   imports: [

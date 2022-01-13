@@ -1,20 +1,20 @@
 const jwt = require('jsonwebtoken');
 
-// hedha en cas on utilise json web token pour sécurité fel login , access token w refresh token aprés période
-const auth = (req,res,next)=> {
-    try {
-        const token = req.header("Authorization")
-        if(!token) return res.status(400).json({msg: "Invalid Authentication"})
-
-        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) =>{
-            if(err) return res.status(400).json({msg: "Invalid Authentication"})
-
-            req.user = user
-            next()
-        })
-    } catch (err) {
-        return res.status(500).json({msg: err.message})
+module.exports = (req, res, next) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1];
+    const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
+    const userId = decodedToken.userId;
+    if (!req.headers.userid) {
+        throw 'Bad userID request';
+    } else if (req.headers.userid !== userId) {
+      throw 'Invalid user ID';
+    } else {
+      next();
     }
-}
-
-module.exports = auth
+  } catch (error) {
+    res.status(401).json({
+      error: error.message
+    });
+  }
+};

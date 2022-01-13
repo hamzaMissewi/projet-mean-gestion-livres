@@ -1,4 +1,4 @@
-const Category = require("../models/category");
+const Category = require("../../models/category");
 
 // exports.all = (req, res) => {
 //   Category.find()

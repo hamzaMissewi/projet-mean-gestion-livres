@@ -21,14 +21,14 @@ export class HomeSectionComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log(this.booksList);
-    this.booksHamzaList.forEach((a: any) => {
+    // this.booksHamzaList.forEach((a: any) => {
       // this.filterCategory = a.category;
       // if (
       //   a.category === "sport"
       // )
-      Object.assign(a, { quantity: 1, total: a.price });
-    });
-    console.log(this.booksHamzaList);
+      // Object.assign(a, { quantity: 1, total: a.price });
+    // });
+    // console.log(this.booksHamzaList);
 
     // this.api.getProduct().subscribe((res) => {
     //   this.productList = res;

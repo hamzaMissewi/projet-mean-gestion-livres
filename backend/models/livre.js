@@ -34,9 +34,9 @@ const bookSchema = new mongoose.Schema(
       // default: url
     },
     category: {
-      // type: String,
+      type: String,
       // type: mongoose.Schema.Types.ObjectId,
-      type: Object,
+      // type: Object,
       required: false,
       // ref: "Category",
       default: "Science"
@@ -56,8 +56,7 @@ const bookSchema = new mongoose.Schema(
   }
 );
 
-const Book = mongoose.model("Book", bookSchema);
+// const Book = mongoose.model("Book", bookSchema);
+// module.exports = Book;
 
-module.exports = Book;
-
-// ou bien: module.exports = mongoose.model("Book", bookSchema)
+module.exports = mongoose.model("Book", bookSchema);

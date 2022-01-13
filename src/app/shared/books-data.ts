@@ -13,7 +13,7 @@ export const booksData = [
     prix: '2.99 $',
     imageUrl:
       'https://m.media-amazon.com/images/P/B09NDJDMFL.01._SCLZZZZZZZ_SX500_.jpg',
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -36,7 +36,7 @@ export const booksData = [
     prix: '5 $',
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/51n382CyioL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
-    goals: [],
+    details: ["math is key of thing, conor mcgregor"],
     requirements: [],
   },
   {
@@ -51,7 +51,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/41hV+q2UlkL._SY344_BO1,204,203,200_.jpg',
     published_date: '10/11/2005',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -74,7 +74,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/41UCrRU88SL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
     published_date: '10/11/2008',
     nbre_page: 20,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -97,7 +97,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/516XdxUXpNL._SX326_BO1,204,203,200_.jpg',
     published_date: '10/11/1997',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -119,7 +119,7 @@ export const booksData = [
     imageUrl: 'https://m.media-amazon.com/images/I/51PsdEs6H9S.jpg',
     published_date: '10/11/2020',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -141,7 +141,7 @@ export const booksData = [
     imageUrl: 'https://m.media-amazon.com/images/I/41Y9jM-Le2L.jpg',
     published_date: '10/11/2020',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -164,7 +164,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/71N7vj5cSkL._AC_UL210_SR195,210_.jpg',
     published_date: '10/9/2021',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -187,7 +187,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/41A3imtffCL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
     published_date: '10/12/2019',
     nbre_page: 25,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -210,7 +210,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/61qbj4KwauL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
     published_date: '10/12/2019',
     nbre_page: 47,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -234,7 +234,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/5189dK2traL._SX384_BO1,204,203,200_.jpg',
     published_date: '09/11/2020',
     nbre_page: 50,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -256,7 +256,7 @@ export const booksData = [
     imageUrl: 'https://m.media-amazon.com/images/I/51BXdIhEe1L._SX260_.jpg',
     published_date: '09/11/2020',
     nbre_page: 60,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
@@ -279,7 +279,7 @@ export const booksData = [
       'https://images-na.ssl-images-amazon.com/images/I/51tPFqRdrjL._SY445_SX342_QL70_FMwebp_.jpg',
     published_date: '09/11/2021',
     nbre_page: 40,
-    goals: [
+    details: [
       'Understand how computers work from inside out',
       'Understand basic concepts of software programming (in Java, Python, PHP)',
       'Fundamentals of databases, mobile apps and cloud computing',
